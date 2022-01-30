@@ -8,4 +8,5 @@ app = FastAPI()
 def read_root():
     return {"Metadata": {
         "version": os.environ.get("VERSION", "not specified"),
+        "environment": os.environ.get("ENVIRON", "not specified"),
     }}

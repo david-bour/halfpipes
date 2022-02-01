@@ -1,0 +1,16 @@
+name: Launch App
+
+on:
+  workflow_dispatch:
+    inputs:
+      envName:
+        description: 'Environment to deploy to'
+        required: true
+        default: 'dev'
+
+jobs:
+  deployment:
+    uses: ./.github/workflows/deployment.yml
+    with:
+      ip_address: 0.0.0.0
+      envName: ${{ github.event.inputs.envName }}

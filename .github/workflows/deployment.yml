@@ -1,0 +1,25 @@
+name: Deploy Service
+
+on:
+  workflow_call:
+    inputs:
+      ip_address:
+        required: true
+        type: string
+      envName:
+        required: true
+        type: string
+    secrets:
+      ssh_key:
+        required: true
+
+jobs:
+  deploy_service:
+    environment: ${{ inputs.envName }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - id: Deployment Action
+        run: |
+          echo "Deploying to ${{ inputs.ip_address }}"
+          echo "Deploying on environment ${{ inputs.envName }}"

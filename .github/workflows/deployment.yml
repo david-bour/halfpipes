@@ -9,9 +9,6 @@ on:
       envName:
         required: true
         type: string
-    secrets:
-      ssh_key:
-        required: true
 
 jobs:
   deploy_service:
@@ -19,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - id: Deployment Action
+      - id: deployment-action
         run: |
           echo "Deploying to ${{ inputs.ip_address }}"
           echo "Deploying on environment ${{ inputs.envName }}"

@@ -7,6 +7,9 @@ on:
         description: 'Environment to deploy to'
         required: true
         default: 'dev'
+    secrets:
+      ssh_key:
+        required: true  
 
 jobs:
   deployment:

@@ -9,9 +9,6 @@ on:
       envName:
         required: true
         type: string
-    secrets:
-      ssh_key:
-        required: true
 
 jobs:
   deploy_service:

@@ -5,6 +5,7 @@ from fastapi import FastAPI
 app = FastAPI()
 
 def metadata_service():
+    """ Returns metadata """
     return {
         'Metadata': {
             'version': os.environ.get('VERSION', ''),

@@ -20,3 +20,4 @@ jobs:
         run: |
           echo "Deploying to ${{ inputs.ip_address }}"
           echo "Deploying on environment ${{ inputs.envName }}"
+          echo "Deploying ${{ github.sha }}"

@@ -2,6 +2,11 @@ name: Deploy Dev US
 
 on:
   workflow_dispatch:
+    inputs:
+      environment:
+        type: environment
+        description: environment
+        required: true
 
 jobs:
   deployment:

@@ -9,6 +9,7 @@ def metadata_service():
         'Metadata': {
             'version': os.environ.get('VERSION', ''),
             'environment': os.environ.get('ENVIRONMENT', ''),
+            'region': os.environ.get('REGION', ''),
         }
     }
 
